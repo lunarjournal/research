@@ -1,0 +1,1 @@
+sudo cp ./com.secure.pass.json  ~/.config/google-chrome/NativeMessagingHosts/

@@ -1,0 +1,9 @@
+{
+  "name": "com.secure.pass",
+  "description": "Secure Pass Extension",
+  "path": "/home/dylan/Desktop/dev/app/nativehost",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://ofnlpelffgeihhgfheklbmnodnonkddc/"
+  ]
+}

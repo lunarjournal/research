@@ -1,0 +1,20 @@
+{
+  "name": "SecurePass Extension",
+  "version": "1.0",
+  "manifest_version": 2,
+    "permissions": [
+    "nativeMessaging",
+    "webNavigation", 
+    "*://*/*" ,
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "browser_action" :{
+    "default_popup" : "ui.html",
+    "default_title" : "SecurePass Extension"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  }
+}

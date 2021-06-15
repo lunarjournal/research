@@ -1,0 +1,39 @@
+\section{Acceptance Test Procedure}
+ATP is a testing methodology which measures the degree to which a design meets user requirements as well as design specifications. It assesses whether a system is able to emulate all the functional requirements of a design. In designing an ATP specification careful consideration of the design goals and objectives as well as user requirements must be taken into consideration. 
+
+\subsection{User Requirements}
+
+Table 8 lists a number of user requirements that were inferred from the topic brief for this report. It is seen to consist of four core requirements.
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+RID & Requirement                  & Rationale                                                                                                                                                                                                                                                         \\ \hline
+R01 & Must be USB based            & \begin{tabular}[c]{@{}l@{}}The aim of this report is to develop a self encrypting USB \\ password manager. Interfacing between the end users \\ computer and the host device is expected to take place\\ over a USB bus.\end{tabular}                             \\ \hline
+R02 & Should allow interaction/feedback & \begin{tabular}[c]{@{}l@{}}The end user of the device needs to have a clear \\ understanding of the various phases of device operation \\ and the corresponding status of each operation.\end{tabular}                                                            \\ \hline
+R03 & Provide SSO capability       & \begin{tabular}[c]{@{}l@{}}The end device should allow a user to log into any of \\ their accounts using a common set of credentials after \\ signing into any of their  accounts at least once \\ (required to capture login credentials)\end{tabular}           \\ \hline
+R04 & Encrypt Credentials          & \begin{tabular}[c]{@{}l@{}}After the set of credentials used to access an account \\ is captured these credentials are required to be stored\\ in an encrypted form to prevent unauthorized \\ individuals from gaining access to online\\ accounts.\end{tabular} \\ \hline
+\end{tabular}
+\caption{Table of user requirements.}
+\end{table}
+\subsection{Design Specifications}
+The design specifications are mostly derived from Table 3 which can be found in section 4.4 (Design Decisions). Additionally a minimum time frame of around 5 seconds is required for encryption and decryption operations. A GUI (provided through the browser extension) is also required to interact with the end device.
+
+\subsection{Testing Procedures}
+Table 9 lists the various ATP tests that are required to test the functional aspects of the overall design. 
+
+Tests A100-A101 are used to verify serial and command functionality as well as encryption time. Tests A102 and A105 test the SSO functionality of the overall design. Finally tests A103-A104 test the software client functionality as well as decryption time. 
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+ID   & Test Configuration                                                                                                                     & Test Procedure                                                                                                                                                                                                                                & Pass Condition                                                                                                                                                                                                                                          \\ \hline
+A100 & \begin{tabular}[c]{@{}l@{}}Device is attached to \\ the USB port of a \\ remote host. Arduino \\ serial monitor started.\end{tabular}  & \begin{tabular}[c]{@{}l@{}}The relevant COM port is \\ selected. Next the \$format\$\\ command is supplied.\end{tabular}                                                                                                                      & \begin{tabular}[c]{@{}l@{}}If an OK response is received \\ within 5  seconds then pass.\end{tabular}                                                                                                                                                   \\ \hline
+A101 & \begin{tabular}[c]{@{}l@{}}Device is attached to \\ the USB port of a \\ remote host. Arduino \\ serial  monitor started.\end{tabular} & \begin{tabular}[c]{@{}l@{}}The relevant COM port is \\ selected. The key modulus is\\ then extracted using OpenSSL. \\ Next the \$encrypt\$ command \\ is supplied along with the \\ corresponding parameters \\ and dummy data.\end{tabular} & \begin{tabular}[c]{@{}l@{}}After the \$encrypt\$ command \\ has finished execution, the\\ \$list\$ command should be \\ run. If an OK response is\\ received within 5 seconds \\ and \$list\$  contains the filename\\ supplied then pass.\end{tabular} \\ \hline
+A102 & \begin{tabular}[c]{@{}l@{}}Device is attached to \\ the USB port of a \\ remote host. Browser\\ extension loaded.\end{tabular}         & \begin{tabular}[c]{@{}l@{}}The user navigates to an online\\ account and enters user name \\ and password. The user then\\ selects the 'Store Password'\\ button of the browser extension\end{tabular}                                        & \begin{tabular}[c]{@{}l@{}}If the list of files of the filesystem\\ is updated within the browser \\ extension to reflect the newly\\ added credential then pass.\end{tabular}                                                                          \\ \hline
+A103 & \begin{tabular}[c]{@{}l@{}}Device is attached to \\ the USB port of a \\ remote host. Browser\\ extension loaded.\end{tabular}         & \begin{tabular}[c]{@{}l@{}}The browser extension icon is \\ selected in google chrome. \\ Then from the GUI the decrypt\\ icon is selected.\end{tabular}                                                                                      & \begin{tabular}[c]{@{}l@{}}If the plain-text password of the\\ selected credential is displayed\\ to the user within 5 seconds then\\ pass.\end{tabular}                                                                                                 \\ \hline
+A104 & \begin{tabular}[c]{@{}l@{}}Device is attached to \\ the USB port of a \\ remote host. Browser\\ extension loaded.\end{tabular}         & \begin{tabular}[c]{@{}l@{}}The browser extension icon is \\ selected in google chrome.\\ Then from the GUI the delete\\ icon is selected.\end{tabular}                                                                                        & \begin{tabular}[c]{@{}l@{}}If the corresponding filesystem\\ entry for a credential is removed\\ from the filesystem list in the\\ browser extension then pass.\end{tabular}                                                                            \\ \hline
+A105 & \begin{tabular}[c]{@{}l@{}}Device is attached to \\ the USB port of a \\ remote host. Browser\\ extension loaded.\end{tabular}         & \begin{tabular}[c]{@{}l@{}}A user navigates to the login\\ portal of an account that has \\ had its credentials added in \\ the test as described in A102.\end{tabular}                                                                       & \begin{tabular}[c]{@{}l@{}}If the corresponding login \\ credentials are filled in and an\\ authentication request submitted\\ within 5 seconds then pass.\end{tabular}                                                                                 \\ \hline
+\end{tabular}
+\caption{Acceptance Test Procedure (ATP) matrix.}
+\end{table}

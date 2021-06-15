@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Test</title>
+</head>
+
+<style type="text/css">
+html{
+  min-width:200px;
+  border-radius: 5px;
+  background-color: rgb(221, 221, 221);
+}
+.container {
+  padding:0px;
+}
+.load{
+  float: right;
+  width: 27px;
+  display: none;
+}
+
+.delete{
+  float: right;
+  width: 15px;
+  cursor: pointer;
+}
+
+.decrypt{
+  float: right;
+  width: 14px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+.header{
+  background-color: rgb(209, 209, 209);
+  padding:8px;
+  border-radius: 2px;
+}
+.file{
+  background-color: rgb(221, 221, 221);
+  padding:8px;
+  border-radius: 2px;
+  display: none;
+  
+}
+
+.save{
+  width:100%;
+  background-color: rgb(221, 221, 221);
+  margin-top: 15px;
+  
+}
+
+.format{
+  width:100%;
+  background-color: rgb(221, 221, 221);
+  margin-top: 5px;
+}
+.file:hover{
+  background-color: rgb(214, 214, 214);
+}
+</style>
+<body>
+<div>
+<img id ="load" src="/load.gif" class="load"/>
+<div class="header">File System</div>
+</div>
+<div class="file" id="fid">test
+  <img id="delete" src="/delete.png" class="delete"/>  
+  <img id="decrypt" src="/decrypt.png" class="decrypt"/>  
+</div>
+
+<div class="container" id="parent">
+
+</div>
+<button id="save" class="save">Store Credential</button>
+<button id="format" class="format">Format Filesystem</button>
+</body>
+<script src="script.js"></script>
+</html>

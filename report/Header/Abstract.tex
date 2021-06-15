@@ -1,0 +1,8 @@
+\section{Abstract}
+
+This report details the research, development and attack analysis of a USB based password manager with pseudo single sign-on (SSO) capabilities termed 'SecurePass'. With the increasing prevalence of web-based cloud services recent studies suggest that the average person retains approximately 25-70 online credentials that need to be securely stored. With a complex cyber threat landscape, password managers which store credentials on the internet are at constant risk and therefore a safer alternative is required that helps users manage and log into their accounts through a single, isolated hardware interface.
+
+The design approach taken is two fold, the first component of the design consists of a hardware-based USB drive which encrypts and stores user credentials on an internal file system while the second software-based client retrieves and decrypts user credentials and with a javascript based form submission engine, attempts to achieve SSO capability for a wide range of online services.
+
+The software client itself consists of a browser extension to provide password management functions through a graphical user interface as well as a native host (middleman) client to relay communications between the USB drive and browser extension.
+

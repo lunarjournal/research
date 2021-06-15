@@ -1,0 +1,15 @@
+\section{Conclusion}
+\subsection{General}
+As was discussed in section 8, all user requirements as well as ATP testing procedures were met. The end product from this report consisted of a portable hardware based password manager that could be plugged into the USB port of a system running the Linux kernel and - through the installation of a software client (native host and browser extension) - could allow an end user to store account credentials in an encrypted form on the host device as well as allow users to log into their corresponding account through SSO capability. USB functionality also did not require the installation of special drivers, i.e the host device inherited 'plug-and-play' functionality. 
+
+This report also provided an attack analysis of the resulting system in which three experiments were conducted which were aimed at characterising the extent to which the three key network security objectives, namely: confidentiality, integrity and availability of data were maintained. It was determined that all three security objectives were adequately met and that potential vulnerabilities that could lead to credential compromise mainly involved threat actors maliciously altering software or gaining access to the master encryption key through remote/backdoor means, often involving privilege escalation.
+
+\subsection{Design limitations}
+
+Some limitations of the resulting design include the requirement of two micro controllers for data processing (which increases design cost) as well as the delay associated with encryption which is mainly due to the relatively low clock rate of the ATMega328 (approx 16 MHz). 
+
+The current file-system implementation currently only supports up to 7 credentials which can be stored on the auxiliary MCU's EEPROM. The total number of credentials could probably have been increased with a more optomized filesystem design, however the major limiting factor was EEPROM storage space which was limited to 1024B. Additionally filenames had to be limited to four characters in length in order to save on disk space.
+
+\subsection{Future Work}
+Some proposals for future work on this topic include optimizing the encryption algorithm used to store credentials as this was identified as a bottleneck. Alternatives to RSA could be explored such as AES or Twofish which might prove more efficient on resource constrained embedded systems. An alternative to serial based communications could also be explored, such as implementing USB functionality through an FPGA rather than a microcontroller which could result in faster communication and processing speeds. Such a design choice could potentially improve user experience significantly. 
+

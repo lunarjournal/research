@@ -1,0 +1,48 @@
+\section{Discussion}
+This report had the explicit goal of developing a USB based password manager system with single sign on capabilities. In this section of the report various objectives will be compared to determine if user requirements as well as ATP procedures were met. Additionally various performance metrics of the overall system are quantified.
+
+\subsection{Meeting User Requirements}
+ Referring to Table 8 (section 6.1) four key user requirements were identified. The first requirement (R01) was that the system should be USB based, this requirement was achieved via the USB driver MCU (and it's associated firmware) which would allow the auxiliary MCU to communicate with the host PC over a USB bus. The final prototype consisted of a USB male adapter that could be plugged into the USB port of a computer. In addition USB communication was designed so that an end user required no special drivers to use the device on a Linux based system.
+ 
+ The second user requirement (R02) was that the system should provide interactivity and feedback to the end user. This requirement was met through the UI of the browser extension. An activity indicator would appear when the end device was busy and any errors encountered during the various phases of operation would be presented to the user.
+ 
+ That the end device should provide SSO (single sign on) capability was identified as the third user requirement (R03). This requirement was met by developing a JavaScript client (as part of the browser extension) which could save account credentials (in an encrypted form) on the USB device and retrieve them when a user visited the corresponding login portal. The credentials would then be automatically filled in and an authentication request submitted using the submission engine (Figure 5.4).
+ 
+ Finally the last user requirement that was identified required that the credentials should be encrypted before storing them on the USB device. This requirement was achieved through developing RSA-1024 encryption from scratch, with the auxiliary MCU being responsible for encryption and the software client (native host) being responsible for decryption and well as private key generation. Therefore it can be concluded that all user requirements were met.
+ 
+\subsection{Passing ATP tests}
+
+A list of ATP tests were developed and are shown in Table 9 (section 6.3). The results of the various ATP tests is shown in Table 13. It can be seen that all ATP tests were passed meaning that the prototype could be certified as working and that a PCB, with minor modifications to the overall design, could be created to turn this project into a commercial product. The response time of commands shown in Table 13 were obtained using a software timer.
+
+ \begin{table}[H]
+ \centering
+\begin{tabular}{|l|l|l|}
+\hline
+ATP ID & Results                                                                                                                                   & Pass/Fail \\ \hline
+A100   & "OK" received                                                                                                                             & Pass      \\ \hline
+A101   & \begin{tabular}[c]{@{}l@{}}"OK" received within 3.2 seconds, \$list\$ displays\\ the corresponding filename.\end{tabular}                   & Pass      \\ \hline
+A102   & Credential list updated (UCT account)                                                                                                                   & Pass      \\ \hline
+A103   & Credential decrypted and displayed within 2 sec.                                                                                          & Pass      \\ \hline
+A104   & Corresponding credential removed, list updated.                                                                                           & Pass      \\ \hline
+A105   & \begin{tabular}[c]{@{}l@{}}User is signed into account (UCT account in this\\ case) automatically within 2 seconds of visit.\end{tabular} & Pass      \\ \hline
+\end{tabular}
+\caption{Results of ATP tests.}
+\end{table}
+
+\subsection{System Performance}
+Encryption and decryption performance is important in characterising the psychological acceptability of the overall design. A design implementing security measures should not impose limitations on an end user that may be deemed as unacceptable. Examples of such a limitation could be the time taken to encrypt credentials or the SSO sign-on time. Table 14 lists some system performance metrics, all resulting times were captured with a software timer (\hyperref[sec:timerc]{Appendix E.5}) by measuring the time difference between the start and end of an operation/process.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{llllll}
+Process     & t1 /ms & t2/ ms & t3 /ms & t4 /ms & tavg /ms \\
+Encryption  & 4.25   & 4.55   & 4.31   & 4.11   & 4.31     \\
+Decryption  & 1.12   & 1.14   & 1.12   & 1.13   & 1.13     \\
+SSO (Login) & 1.62   & 1.78   & 1.88   & 1.75   & 1.76    
+\end{tabular}
+\caption{Performance metrics of end system.}
+\end{table}
+
+It can be seen that encryption overall was the slowest with an average time of around 4.31 seconds. Decryption times were almost half, with an average value of around 1.68 seconds. An SSO based performance test was conducted by measuring the time taken to automatically sign into an account from a stored credential. The test account used was the UCT web-mail login portal. An average of 1.76 seconds was required for SSO sign in operations.
+
+The performance of the overall system could be deemed as acceptable, with a user requiring only a number of seconds between operations rather than minutes or hours. This means that psychological acceptability is likely to hold.
