@@ -13,12 +13,12 @@ A software client was then developed and consisted of a chrome browser extension
 ![Browser Extension](https://raw.githubusercontent.com/lunarjournal/EEE4022F/main/images/DE.png)
 
 This repository consists of three sub branches (folders):
-* firmware - source code for the auxiliary and USB driver MCU.
-* software - source code for the browser extension and native host.
-* report - latex (overleaf) source code of report.
+* `firmware` - source code for the auxiliary and USB driver MCU.
+* `software` - source code for the browser extension and native host.
+* `report` - latex (overleaf) source code of report.
 
-**report.pdf** is the compiled PDF version of the project report.</br>
-**topic.pdf** is the original topic PDF.</br>
-**poster.pdf** is the project poster.</br>
+`report.pdf` is the compiled PDF version of the project report.</br>
+`topic.pdf` is the original topic PDF.</br>
+`poster.pdf` is the project poster.</br>
 
 A video demonstration of the system can be found [here](https://www.youtube.com/watch?v=u4TFHCfZJ7M).
