@@ -1,4 +1,4 @@
-# EEE4022F - Undegraduate Research Thesis
+# EEE4022F - Undegraduate Research Project
 ![High Level Overview](https://raw.githubusercontent.com/lunarjournal/research/main/images/DL.png)
 
 The goal of my final year thesis project was to design a self-encrypting USB based hardware password manager. Single sign on (SSO) capability was also another requirement for the project. SSO capability allows an end user to log into any of their online accounts through a single, unified interface. Credentials were required to be securely stored in an encrypted form and then subsequently decrypted during an SSO login session. 
