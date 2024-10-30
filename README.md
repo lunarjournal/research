@@ -23,5 +23,3 @@ This repository consists of three sub branches (folders):
 `report.pdf` is the compiled PDF version of the project report.</br>
 `topic.pdf` is the original topic PDF.</br>
 `poster.pdf` is the project poster.</br>
-
-A video demonstration of the system can be found [here](https://www.youtube.com/watch?v=u4TFHCfZJ7M).
