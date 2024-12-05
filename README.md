@@ -1,8 +1,9 @@
-# EEE4022F - Undegraduate Research Project
+# EEE4022F
 
 Author: [`Dylan Müller`](https://www.linkedin.com/in/dylanmuller/)
 
 ```
+Undegraduate Research Project
 University of Cape Town (UCT)
 Student ID: MLLDYL002
 ```
