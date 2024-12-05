@@ -4,7 +4,7 @@ Author: [`Dylan Müller`](https://www.linkedin.com/in/dylanmuller/)
 
 ```
 ECE Undegraduate Research Project
-Title: Self-Encrypting USB Password Manager
+Project Title: Self-Encrypting USB Password Manager
 University of Cape Town (UCT)
 ```
 
