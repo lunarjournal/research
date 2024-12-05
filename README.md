@@ -19,6 +19,8 @@ This repository consists of three sub branches (folders):
 * `software` - source code for the browser extension and native host.
 * `report` - latex (overleaf) source code of report.
 
+Files:
+<br/>
 `report.pdf` - compiled PDF version of the project report.</br>
 `topic.pdf` - original topic PDF.</br>
 `poster.pdf` - project poster.</br>
