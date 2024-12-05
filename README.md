@@ -10,7 +10,6 @@ The auxiliary and USB microcontrollers UART transceivers were then connected tog
 
 ![High Level Overview](https://raw.githubusercontent.com/lunarjournal/research/main/images/HL.png)
 
-
 A software client was then developed and consisted of a chrome browser extension to manage credentials through a UI interface as well as a native host (using google chromes native messsaging API) to enable serial communication between the chrome browser extension and the auxiliary microcontroller. The native host was also responsible for decrypting credentials as well as generating RSA keys and made use of OpenSSL's C API for these tasks. 
 
 ![Browser Extension](https://raw.githubusercontent.com/lunarjournal/research/main/images/DE.png)
@@ -20,6 +19,6 @@ This repository consists of three sub branches (folders):
 * `software` - source code for the browser extension and native host.
 * `report` - latex (overleaf) source code of report.
 
-`report.pdf` is the compiled PDF version of the project report.</br>
-`topic.pdf` is the original topic PDF.</br>
-`poster.pdf` is the project poster.</br>
+`report.pdf` - compiled PDF version of the project report.</br>
+`topic.pdf` - original topic PDF.</br>
+`poster.pdf` - project poster.</br>
