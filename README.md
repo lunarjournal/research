@@ -21,12 +21,12 @@ A software client was then developed and consisted of a chrome browser extension
 ![Browser Extension](https://raw.githubusercontent.com/lunarjournal/research/main/images/DE.png)
 
 This repository consists of three sub branches (folders):
-* `firmware` - source code for the auxiliary and USB driver MCU.
-* `software` - source code for the browser extension and native host.
-* `report` - latex (overleaf) source code of report.
+* `firmware` - `source code for the auxiliary and USB driver MCU.`
+* `software` - `source code for the browser extension and native host.`
+* `report` - `latex (overleaf) source code of report.`
 
 Files:
 <br/>
-* `report.pdf` - `compiled PDF version of the project report.` </br>
-* `topic.pdf` - `original topic PDF.` </br>
-* `poster.pdf` - `project poster.` </br>
+* `report.pdf` - `compiled PDF version of the project report.`
+* `topic.pdf` - `original topic PDF.`
+* `poster.pdf` - `project poster.`
