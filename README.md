@@ -1,7 +1,7 @@
 # EEE4022F
 
 Author: [`Dylan Müller`](https://www.linkedin.com/in/dylanmuller/)
-> University of Cape Town (UCT)
+> University of Cape Town (UCT) [`uct.ac.za`](https://uct.ac.za)
 
 ```
 ECE Undegraduate Research Project
