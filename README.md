@@ -20,7 +20,9 @@ The approach to this problem involved utilizing two `ATMega328P` `MCU's`. The fi
 
 The auxiliary and `USB` `MCU's` `UART` transceivers were then connected together to enable serial communications between both `MCU's`. On `Linux`, `CDC` `ACM` devices appear as virtual serial ports (`/dev/ttyACM*`) and this finally allowed for virtual serial communications between the host `PC` and the auxilliary `MCU` via the `USB` `MCU`.
 
-A software client was then developed and consisted of a chrome browser extension to manage credentials through a `UI` interface as well as a native host (using google chrome's native messsaging `API`) to enable serial communication between the chrome browser extension and the auxiliary `MCU`. The native host was also responsible for decrypting credentials as well as generating `RSA` keys and made use of `OpenSSL's` `C` `API` for these tasks. 
+A software client was then developed and consisted of a chrome browser extension to manage credentials through a `UI` interface as well as a native host (using google chrome's native messsaging `API`) to enable serial communication between the chrome browser extension and the auxiliary `MCU`. 
+
+The native host was also responsible for decrypting credentials as well as generating `RSA` keys and made use of `OpenSSL's` `C` `API` for these tasks. 
 
 ![Browser Extension](https://raw.githubusercontent.com/lunarjournal/research/main/images/DE.png)
 
