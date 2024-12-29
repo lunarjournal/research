@@ -14,7 +14,7 @@ The goal of my final year research project was to design a self-encrypting `USB`
 
 Credentials were required to be securely stored in an encrypted form and then subsequently decrypted during an `SSO` login session. 
 
-The approach to this problem involved utilizing two `ATMega328P` `MCU's`. The first `MCU`, termed the auxiliary `MCU` implemented a `RSA-1024` `crypto` module as well as a custom `EEPROM` based filesystem to store encrypted credentials using the [`minicore`](https://github.com/MCUdude/MiniCore) software stack and bootloader. 
+The approach to this problem involved utilizing two `ATMega328P` `MCU's`. The first `MCU`, termed the auxiliary `MCU` implemented a `RSA-1024` `crypto` module as well as a custom `EEPROM` based filesystem to store the encrypted credentials using the [`minicore`](https://github.com/MCUdude/MiniCore) software stack and bootloader. 
 
 Next a `USB` `CDC` `ACM` device class was implemented in firmware using the `V-USB` driver stack and flashed onto another `ATMega328P` `MCU`, termed the `USB` `MCU`. 
 
