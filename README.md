@@ -6,6 +6,7 @@ Author: [`Dylan Müller`](https://www.linkedin.com/in/dylanmuller/)
 ```
 ECE Undegraduate Research Project
 Project Title: Self-Encrypting USB Password Manager
+Architecture: 8-bit AVR ATmega328P
 ```
 
 The goal of my final year research project was to design a self-encrypting `USB` based hardware password manager. 
