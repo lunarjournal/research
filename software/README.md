@@ -2,7 +2,7 @@
 
 Firstly enable developer mode within chrome by navigating to `chrome://extensions` and clicking on the 'Developer Mode' checkbox.
 
-Then select the 'Load unpacked' button within the same view and select the folder `/Software/Browser` Extension. 
+Then select the 'Load unpacked' button within the same view and select the folder `/Software/browser`. 
 
 Finally note the extension `ID`
 as this is an important parameter that is required for the installation of the native host.
