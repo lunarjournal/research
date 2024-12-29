@@ -12,7 +12,7 @@ Project Title: Self-Encrypting USB Password Manager
 
 The goal of this research project was to design a self-encrypting `USB` based hardware password manager. 
 
-Credentials were required to be securely stored in an encrypted form and then subsequently decrypted during an `SSO` login session. 
+Credentials were required to be securely stored in an encrypted form internally and then subsequently decrypted during an `SSO` login session. 
 
 The approach to this problem involved utilizing two `ATMega328P` `MCU's`. The first `MCU`, termed the auxiliary `MCU` implemented a `RSA-1024` `crypto` module as well as a custom `EEPROM` based filesystem to store the encrypted credentials using the [`minicore`](https://github.com/MCUdude/MiniCore) software stack and bootloader. 
 
