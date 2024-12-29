@@ -12,7 +12,7 @@ as this is an important parameter that is required for the installation of the n
 Mark the `build.sh` and install.sh scripts as executable within a terminal and run thie build.sh script. 
 
 A binary file named **nativehost** will be created within the
-same folder. Next modify the file `com.secure.pass.json` to include the ID of the extension created earlier along with the full path of the nativehost binary created
+same folder. Next modify the file `com.secure.pass.json` to include the `ID` of the extension created earlier along with the full path of the nativehost binary created
 earlier. 
 
 Finally run `install.sh`.
