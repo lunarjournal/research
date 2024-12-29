@@ -10,7 +10,7 @@ Project Title: Self-Encrypting USB Password Manager
 
 `Architecture`: `8-bit AVR ATmega328P`
 
-The goal of my final year research project was to design a self-encrypting `USB` based hardware password manager. 
+The goal of this research project was to design a self-encrypting `USB` based hardware password manager. 
 
 Credentials were required to be securely stored in an encrypted form and then subsequently decrypted during an `SSO` login session. 
 
