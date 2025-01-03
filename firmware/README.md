@@ -14,7 +14,7 @@ In order to flash the auxiliary firmware onto an `MCU` the `ISP` programmer must
 
 Once this has been complete the source code within the folder `/firmware/mcu` must be copied to a folder named main. 
 
-Then within the arduino `IDE` select File->Open and select the folder previously named `"main"`. 
+Then within the arduino `IDE` select `File->Open` and select the folder previously named `"main"`. 
 
 An editor window with all five source code files should appear. 
 Within the `IDE` select `Tools->Programmer->USBasp`. Finally select `Sketch->Upload Using Programmer` to flash the firmware.
