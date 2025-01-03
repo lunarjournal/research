@@ -1,6 +1,6 @@
 # Requisites
 
-For Ubuntu based systems install the prerequisite packages using the following command:
+For `Ubuntu` based systems install the prerequisite packages using the following command:
 
 `sudo apt-get install binutils gcc-avr avr-libc uisp avrdude flex byacc bison`
 
