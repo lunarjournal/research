@@ -17,7 +17,9 @@ Once this has been complete the source code within the folder `/firmware/mcu` mu
 Then within the arduino `IDE` select `File->Open` and select the folder previously named `"main"`. 
 
 An editor window with all five source code files should appear. 
-Within the `IDE` select `Tools->Programmer->USBasp`. Finally select `Sketch->Upload Using Programmer` to flash the firmware.
+Within the `IDE` select `Tools->Programmer->USBasp`. 
+
+Finally select `Sketch->Upload Using Programmer` to flash the firmware.
 
 # Flashing Driver MCU Firmware
 
