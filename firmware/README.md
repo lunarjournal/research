@@ -6,7 +6,7 @@ For `Ubuntu` based systems install the prerequisite packages using the following
 
 Additionally the Arduino `IDE` must be installed. 
 
-A Linux binary may be downloaded from [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software).
+A Linux binary may be downloaded from [`https://www.arduino.cc/en/software`](https://www.arduino.cc/en/software).
 
 # Flashing Auxiliary MCU Firmware
 
